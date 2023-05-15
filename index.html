@@ -3,13 +3,19 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+
   <title>Energiza! Solar e eólica</title>
   <!--CSS Bootstrap-->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
   <!--CSs Personalizado-->
   <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+  <link rel="stylesheet" type="text/css" href="css/arquivodoido.css" />
+
   <!--Fonte para icones- Biblioteca-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
     integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous" />
@@ -23,7 +29,7 @@
     <header class="container">
       <!--Menu de navegação-->
       <nav class="navbar navbar-expand-lg navbar-dark">
-        <a href="#" class="navbar-brand">
+        <a href="index.html" class="navbar-brand" target="_blank">
           <img src="img/logo.png" height="140" class="d-inline-block align-top" />
         </a>
         <!--btn para caso mobile-->
@@ -45,7 +51,7 @@
               <a href="#servicos" class="nav-link text-light font-weight-bold scroll-page">Serviços</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link text-light font-weight-bold scroll-page">Contato</a>
+              <a href="formulario.html" class="nav-link text-light font-weight-bold scroll-page">Contato</a>
             </li>
           </ul>
           <!--Botao de orçamento-->
@@ -310,7 +316,7 @@
             <div class="tabela-preco sombra">
               <div class="preco-detalhe">
                 <h2>Locação de Usina Solar </h2>
-                  <strike>R$8.854,23</strike>
+                <strike>R$8.854,23</strike>
                 <span>R$5.200,00</span>
                 <ul>
                   <li>Locação de uma Usina Solar você economiza até 20%</li>
@@ -393,24 +399,92 @@
   <footer class="container-fluid bg-rodape1">
     <div class="row">
       <div class="col-md-4">
-        <h5 class="text-light align-middle mais-info"><i class="fas fa-info-circle fa-2x mr-2 text-light"></i>
-          Informações úteis</h5>
+        <h5 class="text-light align-middle mais-info"><i class="fas fa-info-circle fa-2x mr-2 text-light">Informações úteis</i>
+          </h5>
         <ul class="text-light">
-          <li><a href="#" class="text-light"><i class="fa fa-angle-right"></i></i>Trabalhe conosco</a></li>
+          <li><a href="https://www.linkedin.com/in/energiza/" class="text-light" target="_blank"><i
+                class="fa fa-angle-right"></i></i>Trabalhe conosco</a></li>
           <li><a href="#" class="text-light"><i class="fa fa-angle-right"></i>Telefones úteis</a></li>
-          <li><a href="#" class="text-light"><i class="fa fa-angle-right"></i>Suporte técnico</a></li>
-          <li><a href="#" class="text-light"><i class="fa fa-angle-right"></i>Administrativo</a></li>
+          <li><a href="#" class="text-light"><i class="fa fa-angle-right"></i>Administrativo</a></li><br />
+          <li><a href="#" class="text-light tituloSuporte">
+              <h4 style="margin-left: 18px;">Suporte técnico</h4>
+            </a></li>
+
+          <div style="display: inline-block; margin-right: 10px; ">
+            <button onclick="openForm()"
+              style="padding:5px; background-color: #FE8F4C; border-radius: 5px; box-shadow: 2px 2px 2px rgba(0,0,0,0.3);">
+              Atendimento
+            </button>
+
+          </div>
+
 
         </ul>
       </div>
+      <!--Div oculta form btn suporte-->
+      <div class="form-popup" id="myForm">
+
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="post"
+          class="form-container">
+          <h2>Solicitar suporte via e-mail</h2>
+
+          <input type=hidden name="orgid" value="00DDo000001DPsW">
+          <input type=hidden name="retURL" value="https://energiza.netlify.app/agradecimento2.html">
+
+          <label for="name"><b>Nome</b></label>
+          <input id="name" maxlength="80" name="name" size="20" type="text" /><br>
+
+          <label for="email"><b>E-mail</b></label>
+          <input id="email" maxlength="80" name="email" size="20" type="text" type="text" name="email" required />
+
+          <label for="company"><b>Empresa</b></label>
+          <input id="company" maxlength="80" name="company" size="20" type="text" /><br>
+
+          <label for="phone"><b>Telefone</b></label>
+          <input id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+
+          <label for="subject"><b>Assunto</b></label>
+          <input id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+
+
+
+          <input type="hidden" name="to" value="energizaatendimentoSolar@gmail.com">
+
+          <button type="submit" name="submit" class="btn">Enviar</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Fechar</button>
+        </form>
+
+        <!--Fim da Div oculta form btn suporte-->
+        <!--<form action="enviar-email.php" method="post" class="form-container">
+
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name" required>
+          <br>
+          <label for="company">Empresa:</label>
+          <input type="text" id="com" name="com" required>
+          <br>
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+          <br>
+          <label for="message">Mensagem:</label>
+          <textarea id="message" name="message" required placeholder="Digite sua mensagem"></textarea>
+          <br>
+          <button type="submit" class="btn">Enviar</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Fechar</button>
+        </form>-->
+      </div>
+
+
+
+
       <div class="col-md-4">
         <div class="col-md-6">
           <h6 class="text-light mais-empresa">Mais sobre a empresa<span class="underline-footer" </h6>
               <ul class="text-light">
-                <li><a href="#" class="text-light">Quem Somos</a></li>
-                <li><a href="#" class="text-light">Parceiros</a></li>
-                <li><a href="#" class="text-light">Portifolio</a></li>
-                <li><a href="#" class="text-light">Contato</a></li>
+                <li><a href="#somos" class="text-light">Quem Somos</a></li>
+                <li><a href="#parceiros" class="text-light">Parceiros</a></li>
+                <li><a href="#servicos" class="text-light">Portifolio</a></li>
+                <li><a href="formulario.html" class="text-light">Contato</a></li>
 
               </ul>
         </div>
@@ -425,8 +499,8 @@
               Traga sua empresa</h4>
             <p class="card-text text-justify">Peça um orçamento sem compromisso e veja como podemos ajudar na economia
               de energia</p>
-            </div>
-          
+          </div>
+
         </div>
       </div>
 

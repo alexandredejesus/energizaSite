@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+  <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <title>Energiza! Solar e eólica</title>
@@ -122,8 +123,8 @@
         <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
 
           <input type=hidden name="oid" value="00DDo000001DPsW">
-          <input type=hidden name="retURL" value="https://www.netflix.com/browse">
-
+          <input type=hidden name="retURL" value="https://energiza.netlify.app/agradecimento.html">
+          
           <!--  ----------------------------------------------------------------------  -->
           <!--  NOTA: Estes campos são elementos de depuração opcionais. Remova o       -->
           <!--  comentário dessas linhas se quiser testar no modo de depuração.         -->
@@ -131,53 +132,49 @@
           <!--  <input type="hidden" name="debugEmail"                                  -->
           <!--  value="soulcodeenergiza@gmail.com">                                     -->
           <!--  ----------------------------------------------------------------------  -->
-
+          
           <label for="first_name"><strong>Primeiro Nome</strong></label>
-          <input id="first_name" maxlength="40" name="first_name" size="20" type="text"
-            placeholder="Coloque seu primeiro nome" required class="input-wide" /><br>
-
+          <input  id="first_name" maxlength="40" name="first_name" size="20" type="text" placeholder="Coloque seu primeiro nome" required class="input-wide" /><br>
+          
           <label for="last_name"><strong>Sobrenome</strong></label>
-          <input id="last_name" maxlength="80" name="last_name" size="20" type="text"
-            placeholder="Coloque seu primeiro nome" required class="input-wide" /><br>
-
+          <input  id="last_name" maxlength="80" name="last_name" size="20" type="text" placeholder="Coloque seu sobrenome" required class="input-wide" /><br>
+          
           <label for="company"><strong>Empresa</strong></label>
-          <input id="company" maxlength="40" name="company" size="20" type="text"
-            placeholder="Nome da empresa" required class="input-wide" /><br>
+          <input  id="company" maxlength="40" name="company" size="20" type="text" placeholder="Nome da empresa" required
+          class="input-wide" /><br>
 
+          
           <label for="phone"><strong>Telefone</strong></label>
-          <input id="phone" maxlength="40" name="phone" size="20" type="text" placeholder="(00)0000-0000" /><br>
-
+          <input  id="phone" maxlength="40" name="phone" size="20" type="text"placeholder="(00)0000-0000" /><br>
+          
           <label><strong>CPF</strong></label>
-          <input id="00NDo000003kF1Z" name="00NDo000003kF1Z" size="20" type="text" /><br>
-
+          <input  id="00NDo000003kF1Z" maxlength="14" name="00NDo000003kF1Z" size="20" type="text" /><br>
+          
           <label><strong>Tipo de Energia</strong></label>
-          <select id="00NDo000003jpdb" name="00NDo000003jpdb" title="Tipo de energia solicitada">
-            <option value="">-- Nenhum --</option>
-            <option value="Energia Solar">Energia Solar</option>
-            <option value="Energia Eólica">Energia Eólica</option>
+          <select  id="00NDo000003jpdb" name="00NDo000003jpdb" title="Tipo de energia solicitada"><option value="">-- Nenhum --</option><option value="Energia Solar">Energia Solar</option>
+          <option value="Energia Eólica">Energia Eólica</option>
           </select><br>
-
-          <label for="email">Email</label>
-          <input id="email" maxlength="80" name="email" size="20" type="text" placeholder="teste@gmail.com" required
-            class="input-wide" /><br>
-
+          
+          <label for="email"><strong>Email</strong></label>
+          <input  id="email" maxlength="80" name="email" size="20" type="text" placeholder="teste@gmail.com" required
+          class="input-wide" /><br>
+          
           <label for="zip"><strong>CEP</strong></label>
-          <input id="zip" maxlength="20" name="zip" size="20" type="text" /><br>
-
-          <label for="lead_source">Como nos conheceu</label><select id="lead_source" name="lead_source">
-            <option value="">-- Nenhum --</option>
-            <option value="Site">Site</option>
-            <option value="Redes Sociais">Redes Sociais</option>
-            <option value="Indicacao">Indicação</option>
-            <option value="Lista Adquirida">Lista Adquirida</option>
-            <option value="Outro">Outro</option>
+          <input  id="zip" maxlength="20" name="zip" size="20" type="text" /><br>
+          
+          <label for="lead_source"><strong>Como nos conheceu</strong></label><select  id="lead_source" name="lead_source"><option value="">-- Nenhum --</option><option value="Site">Site</option>
+          <option value="Redes Sociais">Redes Sociais</option>
+          <option value="Indicacao">Indicação</option>
+          <option value="Lista Adquirida">Lista Adquirida</option>
+          <option value="Outro">Outro</option>
           </select><br>
-
+          
           <button type="submit" input type="submit" name="submit"><strong>Enviar</strong>
 
           </button>
-
-        </form>
+          
+          </form>
+          
 
 
 
@@ -209,10 +206,10 @@
         <div class="col-md-6">
           <h6 class="text-light mais-empresa">Mais sobre a empresa<span class="underline-footer" </h6>
               <ul class="text-light">
-                <li><a href="#" class="text-light">Quem Somos</a></li>
-                <li><a href="#" class="text-light">Parceiros</a></li>
-                <li><a href="#" class="text-light">Portifolio</a></li>
-                <li><a href="#" class="text-light">Contato</a></li>
+                <li><a href="#somos" class="text-light">Quem Somos</a></li>
+                <li><a href="#parceiros" class="text-light">Parceiros</a></li>
+                <li><a href="#servicos" class="text-light">Portifolio</a></li>
+                <li><a href="formulario.html" class="text-light">Contato</a></li>
 
               </ul>
         </div>

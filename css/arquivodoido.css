@@ -128,3 +128,85 @@ label {
 .form-group type[radio]{
   padding-top: 100px;
 }
+
+/*---------Estilo btn na pagina de agraecimento-------*/
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+
+  height: 5vh; /* Opcional: Define a altura do container para ocupar toda a altura da janela */
+}
+
+button:hover {
+  background-color: #FFA87D;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+/*************Estilização div pop up suporte*******************/
+
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/*************Estilização div form*******************/
+
+
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+.form-container h2 {
+  text-align: center;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.form-container input[type=text], .form-container textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0 10px 0;
+  border: none;
+  background-color: #f1f1f1;
+}
+
+.form-container input[type=text]:focus, .form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.form-container .cancel {
+  background-color: #ff6666;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 0.8;
+}
+

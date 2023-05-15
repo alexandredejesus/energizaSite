@@ -206,4 +206,42 @@ document.querySelectorAll('input[name="document-type"]').forEach((radio) => {
     event.preventDefault(); // Evita que a página seja recarregada ao enviar o formulário
     enviarFormulario();
   });
+
+
+  //Configuracao dos formularios  suporte
+
+  //mostra a div suporte
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
   
+  //mostrar e ocultar form suporte
+
+  
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+//----------para lidar com o envio do formulário e redirecionamento para a página de agradecimento
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+document.getElementById("myForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Evita o envio do formulário por padrão
+  // Envie os dados do formulário para o endereço de e-mail especificado
+  this.submit();
+  // Redirecione para a página de agradecimento
+  window.location.href = "https://energiza.netlify.app/agradecimento.html";
+});
+
+
